@@ -1,0 +1,15 @@
+<h1>Cities in Maharashtra</h1>
+<table>
+    <tr>
+        <th>Image</th>
+        <th>City Name</th>
+        <th>Information</th>
+        <th>Tourist Places</th>
+    </tr>
+    <tr *ngFor="let c of carr">
+        <td><img src="{{c.imgpath}}" width="100" height="100"/></td>
+        <td>{{c.cityname}}</td>
+        <td>{{c.info}}</td>
+        <td>{{c.touristplcs}}</td>
+    </tr>
+</table>

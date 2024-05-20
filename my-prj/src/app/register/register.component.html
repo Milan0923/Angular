@@ -1,0 +1,76 @@
+<fieldset>
+    <legend><h1>Registration Form</h1></legend>
+<form #myform="ngForm">
+    <label>First Name</label>
+    <input type="text" name="fname" ngModel><br>
+
+    <label>Middle Name</label>
+    <input type="text" name="mname" ngModel><br>
+
+    <label>Last Name</label>
+    <input type="text" name="lname" ngModel><br>
+
+    <label>Gender</label>
+    <input type="radio" name="Gender" value="Male" ngModel>
+    <input type="radio" name="Gender" value="Female" ngModel><br>
+
+    <label>BirthDate</label>
+    <input type="date" name="bdate" ngModel><br>
+
+    <label>City</label>
+    <select name="City" ngModel>
+        <option>Pune</option>
+        <option>Delhi</option>
+        <option>kolkata</option>
+        <option>Chennai</option>
+    </select>
+
+    <label>Contact</label>
+    <input type="number" name="cont" ngModel><br>
+
+    <label>Address</label>
+    <textarea name="addr" cols="15" rows="5" ngModel></textarea><br>
+
+    <input type="submit">
+    <input type="reset">
+</form>
+</fieldset>
+
+<fieldset>
+    <legend><h1>Registration Information</h1></legend>
+    {{myform.value|json}}
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td>{{myform.value['fname']}}</td>
+        </tr>
+        <tr>
+            <th>Middle Name</th>
+            <td>{{myform.value['mname']}}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{myform.value['lname']}}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{myform.value['Gender']}}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{myform.value['City']}}</td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td>{{myform.value['fname']}}</td>
+        </tr>
+        <tr>
+            <th>Contact</th>
+            <td>{{myform.value['cont']}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{myform.value['addr']}}</td>
+        </tr>
+    </table>
+</fieldset>
